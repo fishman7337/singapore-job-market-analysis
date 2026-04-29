@@ -7,7 +7,7 @@ This repository was produced for Singapore Polytechnic, School of Computing, und
 - Module: ST1510 Programming for Data Analytics
 - Assessment: CA2
 - Academic year: AY2024/2025, Year 1 Semester 2
-- Student: Goh Kun Ming
+- Students: Goh Kun Ming and Goh Jenson
 - Lecturer: Senior Lecturer Goh Chia Ming
 
 ## Project Title

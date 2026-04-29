@@ -1,6 +1,7 @@
 # Authors
 
-- Goh Kun Ming - student author and analyst
+- Goh Kun Ming - student co-author and analyst
+- Goh Jenson - student co-author and analyst
 
 ## Academic Supervision
 

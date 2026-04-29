@@ -6,6 +6,8 @@ date-released: "2026-04-29"
 authors:
   - family-names: "Goh"
     given-names: "Kun Ming"
+  - family-names: "Goh"
+    given-names: "Jenson"
 type: software
-repository-code: "https://github.com/fishman7337/singapore-job-market-analysis"
+repository-code: "https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis"
 abstract: "Academic data analytics project examining Singapore graduate employment, salaries, labour force trends, and workforce competitiveness."

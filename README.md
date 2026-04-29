@@ -1,7 +1,7 @@
 # Singapore Graduate Employment & Labour Market Analytics
 
-[![CI](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/codeql.yml/badge.svg)](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/codeql.yml)
+[![CI](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/codeql.yml/badge.svg)](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/codeql.yml)
 
 This repository contains an academic data analytics project on Singapore graduate employment, salaries, labour force participation, and workforce competitiveness. It preserves the original ST1510 CA2 notebook and slide deck, while adding a maintainable Python package, tests, CI, and DataOps documentation around the analysis.
 
@@ -12,7 +12,7 @@ This repository contains an academic data analytics project on Singapore graduat
 - Module: ST1510 Programming for Data Analytics
 - Assessment: CA2
 - Academic year: AY2024/2025, Year 1 Semester 2
-- Student: Goh Kun Ming
+- Students: Goh Kun Ming and Goh Jenson
 - Lecturer: Senior Lecturer Goh Chia Ming
 
 ## Research Question
@@ -117,10 +117,14 @@ The repository also runs CodeQL code scanning on pushes, pull requests, and a we
 - [Reproducibility guide](docs/REPRODUCIBILITY.md)
 - [Artefact manifest](docs/ASSET_MANIFEST.md)
 
+## License
+
+This project is released under the MIT License. See [LICENSE.md](LICENSE.md).
+
 ## Limitations
 
 This project should be treated as an academic analytics submission, not as an official labour market forecast. The analysis depends on the quality, coverage, and update timing of the source datasets. Modelling results should be interpreted as exploratory evidence, not causal proof.
 
 ## Attribution
 
-Created by Goh Kun Ming for ST1510 Programming for Data Analytics CA2 at Singapore Polytechnic, School of Computing.
+Created by Goh Kun Ming and Goh Jenson for ST1510 Programming for Data Analytics CA2 at Singapore Polytechnic, School of Computing.

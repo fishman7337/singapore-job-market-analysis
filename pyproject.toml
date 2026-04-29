@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Data analysis utilities and documentation for Singapore graduate employment and labour market trends."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{ name = "Goh Kun Ming" }]
+authors = [{ name = "Goh Kun Ming" }, { name = "Goh Jenson" }]
 dependencies = [
     "matplotlib>=3.7",
     "nltk>=3.8",
