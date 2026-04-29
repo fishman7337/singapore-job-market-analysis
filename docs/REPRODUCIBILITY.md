@@ -36,6 +36,14 @@ python -m sg_job_market_analysis.dataops --allow-missing
 
 Open `notebooks/01_student_submission.ipynb` from the repository root or from Jupyter Lab. The notebook uses paths relative to its own folder and expects raw files in `../data/raw/`.
 
+The split notebooks in `notebooks/02_*.ipynb` through `notebooks/07_*.ipynb` contain the same cells as the original notebook, divided into review-friendly sections. They should be executed in filename order if you want to preserve state across sections.
+
+Verify the split against the original notebook with:
+
+```bash
+python scripts/split_notebook.py --verify
+```
+
 ## Known Reproducibility Limits
 
 - Public datasets may change over time.

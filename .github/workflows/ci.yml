@@ -30,13 +30,16 @@ jobs:
           python -m pip install -e ".[dev]"
 
       - name: Lint
-        run: ruff check src tests
+        run: ruff check src scripts tests
 
       - name: Compile
-        run: python -m compileall src tests
+        run: python -m compileall src scripts tests
 
       - name: Test
         run: pytest
+
+      - name: Verify split notebooks
+        run: python scripts/split_notebook.py --verify
 
       - name: DataOps smoke check
         run: python -m sg_job_market_analysis.dataops --allow-missing

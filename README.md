@@ -36,7 +36,7 @@ How do factors such as degree specialisation, industry, gender, and labour marke
 |-- configs/                  # Dataset registry and project configuration
 |-- data/                     # Local-only raw/interim/processed data folders
 |-- docs/                     # Methodology, DataOps, reproducibility, and project notes
-|-- notebooks/                # Original CA2 notebook
+|-- notebooks/                # Original CA2 notebook plus sequential split notebooks
 |-- reports/                  # Slides, figures, and presentation artefacts
 |-- scripts/                  # Command-line helper scripts
 |-- src/sg_job_market_analysis/
@@ -86,6 +86,13 @@ python -m sg_job_market_analysis.dataops --allow-missing
 
 Open `notebooks/01_student_submission.ipynb` after installing the dependencies and placing datasets in `data/raw/`. The notebook paths are set relative to the `notebooks/` folder.
 
+The original notebook is retained as the full submission artefact. For easier review, the same notebook has also been split into sequential notebooks `02_` through `07_`; together, those split notebooks reconstruct every original cell in order. Regenerate or verify the split with:
+
+```bash
+python scripts/split_notebook.py
+python scripts/split_notebook.py --verify
+```
+
 ## Quality Gates
 
 The GitHub Actions workflow runs:
@@ -93,6 +100,7 @@ The GitHub Actions workflow runs:
 - Ruff linting
 - Python compilation checks
 - Pytest with coverage output
+- Notebook split verification
 - DataOps smoke checks that confirm the validation CLI works without requiring raw data in Git
 
 ## Documentation

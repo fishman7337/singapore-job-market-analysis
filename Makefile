@@ -1,17 +1,20 @@
-.PHONY: install lint compile test dataops dataops-smoke check
+.PHONY: install lint compile test notebooks-verify dataops dataops-smoke check
 
 install:
 	python -m pip install --upgrade pip
 	python -m pip install -e ".[dev]"
 
 lint:
-	ruff check src tests
+	ruff check src scripts tests
 
 compile:
-	python -m compileall src tests
+	python -m compileall src scripts tests
 
 test:
 	pytest
+
+notebooks-verify:
+	python scripts/split_notebook.py --verify
 
 dataops:
 	python -m sg_job_market_analysis.dataops
@@ -19,4 +22,4 @@ dataops:
 dataops-smoke:
 	python -m sg_job_market_analysis.dataops --allow-missing
 
-check: lint compile test dataops-smoke
+check: lint compile test notebooks-verify dataops-smoke
