@@ -5,10 +5,14 @@ on:
   push:
     branches: ["main", "codex/**"]
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -37,6 +41,12 @@ jobs:
 
       - name: Test
         run: pytest
+
+      - name: Security scan
+        run: bandit -r src scripts -c pyproject.toml
+
+      - name: Dependency vulnerability audit
+        run: pip-audit --requirement requirements.txt
 
       - name: Verify split notebooks
         run: python scripts/split_notebook.py --verify

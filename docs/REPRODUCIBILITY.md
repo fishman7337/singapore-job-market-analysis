@@ -20,9 +20,11 @@ Place raw source files in `data/raw/` using the filenames listed in `README.md` 
 Run:
 
 ```bash
-ruff check src tests
-python -m compileall src tests
+ruff check src scripts tests
+python -m compileall src scripts tests
 pytest
+bandit -r src scripts -c pyproject.toml
+pip-audit --requirement requirements.txt
 python -m sg_job_market_analysis.dataops
 ```
 

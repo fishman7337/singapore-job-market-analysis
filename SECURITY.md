@@ -21,3 +21,7 @@ Avoid posting sensitive details in public issues.
 - Store source data under `data/raw/`, which is ignored by Git.
 - Store generated intermediate and processed data under `data/interim/` and `data/processed/`, which are also ignored by Git.
 - Review notebooks before publishing to ensure outputs do not expose sensitive records.
+
+## Automated Checks
+
+The repository CI includes Bandit static security scanning, pip-audit dependency vulnerability checks, and CodeQL code scanning.

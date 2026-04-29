@@ -1,6 +1,7 @@
 # Singapore Graduate Employment & Labour Market Analytics
 
 [![CI](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/codeql.yml/badge.svg)](https://github.com/fishman7337/singapore-job-market-analysis/actions/workflows/codeql.yml)
 
 This repository contains an academic data analytics project on Singapore graduate employment, salaries, labour force participation, and workforce competitiveness. It preserves the original ST1510 CA2 notebook and slide deck, while adding a maintainable Python package, tests, CI, and DataOps documentation around the analysis.
 
@@ -100,8 +101,12 @@ The GitHub Actions workflow runs:
 - Ruff linting
 - Python compilation checks
 - Pytest with coverage output
+- Bandit static security scanning
+- pip-audit dependency vulnerability checks
 - Notebook split verification
 - DataOps smoke checks that confirm the validation CLI works without requiring raw data in Git
+
+The repository also runs CodeQL code scanning on pushes, pull requests, and a weekly schedule.
 
 ## Documentation
 

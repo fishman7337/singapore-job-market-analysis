@@ -1,4 +1,4 @@
-.PHONY: install lint compile test notebooks-verify dataops dataops-smoke check
+.PHONY: install lint compile test security notebooks-verify dataops dataops-smoke check
 
 install:
 	python -m pip install --upgrade pip
@@ -13,6 +13,10 @@ compile:
 test:
 	pytest
 
+security:
+	bandit -r src scripts -c pyproject.toml
+	pip-audit --requirement requirements.txt
+
 notebooks-verify:
 	python scripts/split_notebook.py --verify
 
@@ -22,4 +26,4 @@ dataops:
 dataops-smoke:
 	python -m sg_job_market_analysis.dataops --allow-missing
 
-check: lint compile test notebooks-verify dataops-smoke
+check: lint compile test security notebooks-verify dataops-smoke

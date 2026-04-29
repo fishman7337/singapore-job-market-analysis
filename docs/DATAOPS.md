@@ -48,6 +48,12 @@ python -m sg_job_market_analysis.dataops --format json
 
 CI does not require private or local datasets. It runs with `--allow-missing` so the validation CLI is exercised while keeping raw data out of the repository.
 
+The CI pipeline also includes security checks:
+
+- Bandit scans Python source and maintenance scripts for common security issues.
+- pip-audit checks runtime Python dependencies for known vulnerabilities.
+- CodeQL runs code scanning on push, pull request, and a weekly schedule.
+
 ## Operational Rules
 
 - Keep raw data immutable.

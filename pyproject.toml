@@ -24,13 +24,19 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "bandit[toml]>=1.7",
     "jupyter>=1.0",
     "nbclient>=0.10",
     "nbformat>=5.10",
+    "pip-audit>=2.7",
     "pytest>=8.0",
     "pytest-cov>=5.0",
     "ruff>=0.5",
 ]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = []
 
 [project.scripts]
 sg-job-market-dataops = "sg_job_market_analysis.dataops:main"
