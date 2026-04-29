@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you reference this academic project, please cite it using the metadata below."
+title: "Singapore Graduate Employment & Labour Market Analytics"
+version: "1.0.0"
+date-released: "2026-04-29"
+authors:
+  - family-names: "Goh"
+    given-names: "Kun Ming"
+type: software
+repository-code: "https://github.com/fishman7337/singapore-job-market-analysis"
+abstract: "Academic data analytics project examining Singapore graduate employment, salaries, labour force trends, and workforce competitiveness."

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data products
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/raw/README.md
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Generated reports
+reports/figures/*
+!reports/figures/.gitkeep
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

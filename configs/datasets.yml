@@ -1,0 +1,34 @@
+datasets:
+  - name: graduate_employment_survey
+    path: data/raw/graduate employment survey modified.csv
+    type: csv
+    purpose: Graduate employment and salary outcomes by university, school, degree, and year.
+    required_columns:
+      - year
+      - university
+      - school
+      - degree
+  - name: overall_resident_labour_force
+    path: data/raw/labour_force_1_overall_resident.csv
+    type: csv
+    purpose: Resident labour force totals over time.
+  - name: resident_labour_force_by_education_and_sex
+    path: data/raw/res_labour_force_1_edu_sex.csv
+    type: csv
+    purpose: Resident labour force distribution by education and sex.
+  - name: resident_labour_force_by_age_and_sex
+    path: data/raw/res_labour_force_2_age_sex.csv
+    type: csv
+    purpose: Resident labour force distribution by age and sex.
+  - name: resident_labour_force_participation_rate
+    path: data/raw/res_LFPR_1_sex_agg_age.csv
+    type: csv
+    purpose: Resident labour force participation rates by sex and age aggregate.
+  - name: median_salary_by_industry
+    path: data/raw/Median Salary Per Industry.xlsx
+    type: xlsx
+    purpose: Median salary by industry over time.
+  - name: population
+    path: data/raw/Population.csv
+    type: csv
+    purpose: Population trend context.
