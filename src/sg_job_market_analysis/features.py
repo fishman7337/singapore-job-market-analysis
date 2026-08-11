@@ -72,7 +72,6 @@ FIELD_KEYWORDS: Mapping[str, tuple[str, ...]] = {
 
 def normalize_text(value: object) -> str:
     """Normalise text for deterministic matching."""
-
     text = "" if pd.isna(value) else str(value)
     text = text.strip().lower()
     text = re.sub(r"\s+", " ", text)
@@ -81,7 +80,6 @@ def normalize_text(value: object) -> str:
 
 def classify_field_of_study(degree: object) -> str:
     """Classify a degree name into a broad field of study."""
-
     text = normalize_text(degree)
     if not text:
         return "Unknown"
@@ -100,7 +98,6 @@ def add_field_of_study(
     output_column: str = "field_of_study",
 ) -> pd.DataFrame:
     """Add a broad field-of-study column based on degree text."""
-
     if degree_column not in dataframe.columns:
         raise KeyError(f"Column not found: {degree_column}")
 
@@ -117,7 +114,6 @@ def add_salary_spread(
     output_column: str = "gross_salary_iqr",
 ) -> pd.DataFrame:
     """Add the interquartile salary spread where percentile columns exist."""
-
     missing = {lower_column, upper_column}.difference(dataframe.columns)
     if missing:
         raise KeyError(f"Missing salary percentile column(s): {sorted(missing)}")
@@ -137,7 +133,6 @@ def add_employment_rate_gap(
     output_column: str = "employment_rate_gap",
 ) -> pd.DataFrame:
     """Add the gap between overall and full-time permanent employment rates."""
-
     missing = {overall_column, full_time_column}.difference(dataframe.columns)
     if missing:
         raise KeyError(f"Missing employment-rate column(s): {sorted(missing)}")

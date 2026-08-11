@@ -22,7 +22,6 @@ class DatasetContract:
 
 def get_dataset_contracts() -> tuple[DatasetContract, ...]:
     """Return the raw datasets expected by the original CA2 notebook."""
-
     return (
         DatasetContract(
             name="graduate_employment_survey",

@@ -33,7 +33,6 @@ def validate_required_columns(
     dataset: str,
 ) -> list[ValidationIssue]:
     """Validate that required columns are present after column normalisation."""
-
     available = _normalised_columns(dataframe)
     issues: list[ValidationIssue] = []
     for column in required_columns:
@@ -57,7 +56,6 @@ def validate_non_negative(
     dataset: str,
 ) -> list[ValidationIssue]:
     """Validate that selected columns do not contain negative numeric values."""
-
     available = _normalised_columns(dataframe)
     issues: list[ValidationIssue] = []
     for column in columns:
@@ -89,7 +87,6 @@ def validate_year_columns(
     max_year: int = 2100,
 ) -> list[ValidationIssue]:
     """Validate year columns are numeric and in a reasonable range."""
-
     available = _normalised_columns(dataframe)
     issues: list[ValidationIssue] = []
     for column in columns:
@@ -120,7 +117,6 @@ def validate_no_duplicate_keys(
     dataset: str,
 ) -> list[ValidationIssue]:
     """Validate that a composite key has no duplicate records."""
-
     if not key_columns:
         return []
 

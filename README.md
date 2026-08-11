@@ -1,9 +1,18 @@
-# Singapore Graduate Employment & Labour Market Analytics
+# Singapore Graduate Employment, Salary & Labour-Market Analysis
 
 [![CI](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/codeql.yml/badge.svg)](https://github.com/fishman7337/sp-daaa-pdas-ca2-singapore-job-market-analysis/actions/workflows/codeql.yml)
 
 This repository contains an academic data analytics project on Singapore graduate employment, salaries, labour force participation, and workforce competitiveness. It preserves the original ST1510 CA2 notebook and slide deck, while adding a maintainable Python package, tests, CI, and DataOps documentation around the analysis.
+
+## Evidence and interpretation
+
+| Evidence-backed measure | Current repository evidence |
+| --- | --- |
+| Source scope | The analysis combines **7 source datasets** covering graduate employment, salary, labour force, education, industry, gender, and population. |
+| Reusable test suite | **17 tests** cover contracts, cleaning, features, data operations, notebook structure, and validation at **80.00%** coverage across Python 3.10–3.12. |
+
+The qualitative outcome is a Singapore graduate-employment, salary, and labour-market analysis with regression/imputation and exploratory clustering. It is not a job-description, skill-demand, or job-role-classification project.
 
 ## Academic Context
 

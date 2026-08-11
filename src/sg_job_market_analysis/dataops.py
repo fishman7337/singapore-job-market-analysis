@@ -23,7 +23,6 @@ from sg_job_market_analysis.validation import (
 
 def load_dataset(path: Path, file_type: str) -> pd.DataFrame:
     """Load a supported raw dataset format."""
-
     if file_type == "csv":
         return pd.read_csv(path)
     if file_type in {"xls", "xlsx"}:
@@ -38,7 +37,6 @@ def validate_dataset_contract(
     allow_missing: bool = False,
 ) -> list[ValidationIssue]:
     """Validate one dataset contract against files on disk."""
-
     path = repo_root / contract.relative_path
     if not path.exists():
         return [
@@ -82,7 +80,6 @@ def run_quality_checks(
     allow_missing: bool = False,
 ) -> list[ValidationIssue]:
     """Run all configured data quality checks."""
-
     selected_contracts = tuple(contracts or get_dataset_contracts())
     issues: list[ValidationIssue] = []
     for contract in selected_contracts:
@@ -104,7 +101,6 @@ def _format_text(issues: list[ValidationIssue]) -> str:
 
 def build_parser() -> argparse.ArgumentParser:
     """Build the CLI parser."""
-
     parser = argparse.ArgumentParser(description="Run project data quality checks.")
     parser.add_argument(
         "--repo-root",
@@ -128,7 +124,6 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     """CLI entry point."""
-
     args = build_parser().parse_args(argv)
     issues = run_quality_checks(repo_root=args.repo_root, allow_missing=args.allow_missing)
 
