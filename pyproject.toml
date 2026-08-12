@@ -45,12 +45,19 @@ sg-job-market-dataops = "sg_job_market_analysis.dataops:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-addopts = "-q --cov=sg_job_market_analysis --cov-report=term-missing"
+addopts = "-q --strict-config --strict-markers --cov=sg_job_market_analysis --cov-report=term-missing --cov-fail-under=75"
 testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+extend-exclude = ["notebooks"]
 
 [tool.ruff.lint]
-select = ["B", "E", "F", "I", "SIM", "UP"]
+select = ["B", "D", "E", "F", "I", "SIM", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

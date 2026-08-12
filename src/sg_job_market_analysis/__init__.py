@@ -1,4 +1,4 @@
-"""Singapore Graduate Employment and Labour Market Analytics utilities."""
+"""Singapore graduate employment, salary, and labour-market analysis utilities."""
 
 from sg_job_market_analysis.contracts import DatasetContract, get_dataset_contracts
 

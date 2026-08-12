@@ -12,7 +12,7 @@ This repository was produced for Singapore Polytechnic, School of Computing, und
 
 ## Project Title
 
-Singapore Graduate Employment & Labour Market Analytics
+Singapore Graduate Employment, Salary & Labour-Market Analysis
 
 ## Research Focus
 

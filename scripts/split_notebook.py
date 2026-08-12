@@ -64,13 +64,11 @@ SPLIT_PLAN: tuple[NotebookSplit, ...] = (
 
 def load_notebook(path: Path) -> dict:
     """Load a notebook as raw JSON."""
-
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def build_split_notebook(source: dict, notebook_split: NotebookSplit) -> dict:
     """Create one split notebook while preserving original cells and metadata."""
-
     cells = source["cells"][notebook_split.start_cell - 1 : notebook_split.end_cell]
     notebook = copy.deepcopy(source)
     notebook["cells"] = copy.deepcopy(cells)
@@ -86,7 +84,6 @@ def build_split_notebook(source: dict, notebook_split: NotebookSplit) -> dict:
 
 def write_split_notebooks(source_path: Path = SOURCE_NOTEBOOK) -> list[Path]:
     """Write all configured split notebooks."""
-
     source = load_notebook(source_path)
     output_paths: list[Path] = []
     for notebook_split in SPLIT_PLAN:
@@ -101,7 +98,6 @@ def write_split_notebooks(source_path: Path = SOURCE_NOTEBOOK) -> list[Path]:
 
 def verify_split_notebooks(source_path: Path = SOURCE_NOTEBOOK) -> None:
     """Verify split notebooks reconstruct the original cell sequence exactly."""
-
     source = load_notebook(source_path)
     reconstructed_cells = []
     for notebook_split in SPLIT_PLAN:
@@ -115,7 +111,6 @@ def verify_split_notebooks(source_path: Path = SOURCE_NOTEBOOK) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     """Build the CLI parser."""
-
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--verify",
@@ -127,7 +122,6 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     """CLI entry point."""
-
     args = build_parser().parse_args(argv)
     if args.verify:
         verify_split_notebooks()
